@@ -60,7 +60,7 @@ function App() {
         {user ? <Chat /> :
           <div className='signin-box'>
             <div>
-              <p>Sign in to post in the chat</p>
+              <p>Sign in to post and preview in the chat</p>
             </div>
             <SignIn />
           </div>
