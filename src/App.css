@@ -6,146 +6,340 @@ html, body {
   height: 100%;
 }
 
-header{
-  text-align: left;
-  margin-left: 200px;
-  padding-left: 25px;
-  color:white;
-}
-header p{
-  font-size: 20px;
-  font-weight: 700;
-}
-.leftbar{
-  text-align: center;
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #2f3137;
-    overflow-x: hidden;
-    color: white;
-    padding-top: 20px;
-}
-
-.leftbar .credits{
-  font-size: 10px;
-  position: absolute;
-  opacity: .4;
-  bottom: 30px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  color: white;
-}
-
-.leftbar h1{
-  margin-bottom: 10px;
-}
-
-.title p{
-  font-size: 12px;
-  margin-bottom: 25px;
-}
-
-.title img{
-  width: 25px;
-  height: 25px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-body{
-  background-color: #37393e;
-}
-
-main{
-  border-top-style: solid;
-  border-top:1px solid grey;
-  border-bottom: 1px solid grey;
-  margin-left: 200px;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-}
-
-.message {
-  position: relative;
-  display: flex;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-top: 10px;
-}
-
-.message-wrapper{
-  width: 100%;
-}
-.message-wrapper :hover{
-  background-color: #242529;
-}
-
-form input{
-  width: 85%;
-  height: 50px;
-  padding: 8px 12px;
-  display: inline-block;
+.signout button{
+  width: 100px;
+  background-color: #00a2ff;
+  color: #fff;
+  padding: 10px 5px;
   border: none;
   border-radius: 4px;
-  box-sizing: border-box;
-  background: #40444b;
-  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
-form{
-  margin: 8px;
-  margin-left: 120px;
-  width: 100%;
-  border-top: 1px solid grey;
-  padding: 20px;
-}
+@media screen and (min-width: 500px) /* Desktop */ {
 
-.form-container{
-  position: fixed;
-  bottom: -2px;
-  width: calc(100% - 200px);
-  height: 120px;
-}
+  .signin-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color:#00a2ff;
+    font-weight: 700;
+    align-content: center;
+    display: block;
+    background-color: rgb(26, 26, 26);
+    width: 250px;
+    border-radius: 10px;
+    padding: 10px 5px;
+  }
 
-form button{
-  width: 100px;
+  .signin-box button{
+    margin-bottom: 10px;
+    width: 150px;
+  background-color: #00a2ff;
+  color: #fff;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+
+
+  body::-webkit-scrollbar {
+    width: 0;
+  }
+  header{
+    text-align: left;
+    margin-left: 200px;
+    padding-left: 25px;
+    color:white;
+  }
+  header p{
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .leftbar{
+    text-align: center;
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #2f3137;
+      overflow-x: hidden;
+      color: white;
+      padding-top: 20px;
+  }
+  
+  .leftbar .credits{
+    font-size: 10px;
+    position: absolute;
+    opacity: .4;
+    bottom: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: white;
+  }
+  
+  .leftbar h1{
+    margin-bottom: 10px;
+  }
+  
+  .title p{
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+  
+  .title img{
+    width: 25px;
+    height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  body{
+    background-color: #37393e;
+
+  }
+  
+  main{
+    border-top:1px solid grey;
+    margin-left: 200px;
+    border-top-width: 1px;
+    overflow-y: scroll;
+    height: 800px;
+  }
+  
+  .message {
+    position: relative;
+    display: flex;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+  
+  .message-wrapper{
+    width: 100%;
+  }
+  .message-wrapper :hover{
+    background-color: #242529;
+  }
+  
+  input{
     height: 50px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #40444b;
+    color: rgb(255, 255, 255);
+    width: 100%;
+  }
+  
+  form button{
+    width: 100px;
     background-color: #00a2ff;
     color: #fff;
     padding: 14px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin: 8px 0 8px 10px;
+    margin-left: 10px;  
+  }
+  
+  form{
+    margin-left: 220px;
+    width: 80%;
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+  }
+  
+  
+  .message-details{
+    position: relative;
+    color: white;
+    font-size: 12px;
+    padding: 0 12px;
+    text-align: left;
+  }
+  
+  .username{
+    font-weight: 700;
+    margin-bottom: -10px;
+    color: #ffc400;
+  }
+  
+  .userInfo img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .signout{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+  
+  main::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  main::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  main::-webkit-scrollbar-thumb {
+    background: #00a2ff;
+  }
 }
 
-.message-details{
-  position: relative;
-  color: white;
-  font-size: 12px;
-  padding: 0 12px;
-  text-align: left;
-}
 
-.username{
-  font-weight: 700;
-  margin-bottom: -10px;
-  color: #ffc400;
-}
+@media screen and (max-width: 700px) /* Mobile */ {
 
-.userInfo img {
-  width: 40px;
-  height: auto;
-  border-radius: 50%;
-}
+  .signin-box{
+    position: absolute;
+    top: 500px;
+    left: 25%;
+    color:#00a2ff;
+    font-weight: 700;
+    align-content: center;
+    display: block;
+    background-color: rgb(26, 26, 26);
+    width: 250px;
+    border-radius: 10px;
+    padding: 10px 5px;
+  }
 
-.signout{
-  position: absolute;
-  top: 20px;
-  right: 10px;
+  .signin-box button{
+    margin-bottom: 10px;
+    width: 150px;
+  background-color: #00a2ff;
+  color: #fff;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+
+  header{
+    text-align: center;
+    padding-left: 25px;
+    color:white;
+    position: absolute;
+    top: 220px;
+    width:100%;
+    background-color: #2f3137;
+    right: 0px;
+    border-top: solid 1px grey;
+    
+  }
+
+  header p{
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .leftbar{
+    text-align: center;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #2f3137;
+    overflow-x: hidden;
+    color: white;
+    padding-top: 20px;
+  }
+
+  main{
+    border-top:1px solid grey;
+    border-top-width: 1px;
+    position:absolute;
+    width: 100%;
+    top: 320px;
+    left: -200px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    height: 56.5%;
+  }
+  main::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  main::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  main::-webkit-scrollbar-thumb {
+    background: #00a2ff;
+  }
+  .form-container{
+    position: absolute;
+    bottom: 0px;
+    left: 00px;
+    padding-top: 10px;
+    background-color: #2f3137;
+    border-top: solid 1px grey;
+    width: 100%;
+    height: 70px;
+  }
+  
+  input{
+    height: 50px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #40444b;
+    color: rgb(255, 255, 255);
+    width: 100%;
+  }
+  
+  form button{
+    width: 100px;
+    background-color: #00a2ff;
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;  
+  }
+  
+  form{
+    width: 90%;
+    display: flex;
+    position: absolute;
+    right: 5%;
+  }
+  
+  
+  
+  .message-details{
+    position: relative;
+    color: white;
+    font-size: 12px;
+    padding: 0 12px;
+    text-align: left;
+  }
+  
+  .username{
+    font-weight: 700;
+    margin-bottom: -10px;
+    color: #ffc400;
+  }
+  
+  .userInfo img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .signout{
+    position: relative;
+    top: -10px;
+    padding-bottom: 10px;
+  }
 }

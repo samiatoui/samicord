@@ -38,6 +38,7 @@ function App() {
     <div className='App'>
       <header>
         <p>Welcome to my chat</p>
+        
       </header>
       <div className='leftbar'>
 
@@ -55,18 +56,17 @@ function App() {
       </div>
 
 
-
-      {user ? <Chat /> :
-        <div className='signin-box'>
-          <div>
-            Sign in to post in the chat
+      <section>
+        {user ? <Chat /> :
+          <div className='signin-box'>
+            <div>
+              <p>Sign in to post in the chat</p>
+            </div>
+            <SignIn />
           </div>
-          <SignIn />
-        </div>
-      }
-      <div className='signout'>
-        <SignOut />
-      </div>
+        }
+        
+      </section>
     </div>
   );
 }
@@ -89,7 +89,7 @@ const SignOut = () => {
 function Chat() {
   const dummy = useRef();
   const messagesRef = firestore.collection('messages');
-  const query = messagesRef.orderBy('createdAt').limit(25);
+  const query = messagesRef.orderBy('createdAt').limit(25).limitToLast(25);;
 
   const [messages] = useCollectionData(query, { idField: 'id' });
   const [formValue, setFormValue] = useState('');
@@ -109,6 +109,7 @@ function Chat() {
     })
 
     setFormValue('');
+    dummy.current.scrollIntoView({ behavior: 'smooth' });
 
   }
 
@@ -132,6 +133,7 @@ function ChatMessage(props) {
 
   const messageClass = uid == auth.currentUser.uid ? 'sent' : 'received';
 
+
   return (
     <div className='message-wrapper'>
       <div className={`message ${messageClass}`}>
@@ -139,8 +141,9 @@ function ChatMessage(props) {
           <img src={photoURL} />
         </div>
         <div className='message-details'>
-          <div className='username'>{displayName}</div>
-          <p>{text}</p>
+          <div className='username'>{displayName} </div>
+          <p>{text} </p>
+
         </div>
       </div >
     </div>
