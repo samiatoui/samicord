@@ -38,7 +38,7 @@ function App() {
     <div className='App'>
       <header>
         <p>Welcome to my chat</p>
-        
+        <div className='signout'><SignOut/></div>
       </header>
       <div className='leftbar'>
 
@@ -60,7 +60,7 @@ function App() {
         {user ? <Chat /> :
           <div className='signin-box'>
             <div>
-              <p>Sign in to post and preview in the chat</p>
+              <p>Sign in to post in the chat</p>
             </div>
             <SignIn />
           </div>
