@@ -45,7 +45,6 @@ function App() {
         <div className='title'>
           <h1>samicord</h1>
           <p>My discord look-alike</p>
-          <a href="https://linkedin.com/in/samiatoui"><img src="http://assets.stickpng.com/thumbs/58e91afdeb97430e81906504.png"></img></a>
           <a href="https://github.com/samiatoui"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"></img></a>
         </div>
 
